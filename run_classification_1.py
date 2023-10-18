@@ -640,6 +640,14 @@ def main():
                     break
 
             
+        with open('./outputs/new/with_chebi_loss.txt', 'w') as file:
+            # 使用for循环将数组的每个元素写入文件
+            for item in losses_per_epoch:
+                file.write(str(item) + '\n')
+        with open('./outputs/new/with_chebi_dev.txt', 'w') as file2:
+            # 使用for循环将数组的每个元素写入文件
+            for item in dev_accuracies:
+                file2.write(str(item) + '\n')
         # 创建一个包含两个子图的画布
         fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(10, 8))
 
